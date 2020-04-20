@@ -22,6 +22,21 @@ class Image:
             self.load(filename)
         self.contours = []
 
+    def __getitem__(self, index):
+        return self._raw[index]
+
+    @property
+    def height(self):
+        if self._raw is None:
+            raise ValueError("Cannot read height from undefined image")
+        return self._raw.shape[0]
+
+    @property
+    def width(self):
+        if self._raw is None:
+            raise ValueError("Cannot read width from undefined image")
+        return self._raw.shape[1]
+
     def crop_by_contour(self, index=0, inplace=False):
         """
         Crop the image about the bounding box of a contour.
@@ -141,7 +156,11 @@ class Image:
 
     @staticmethod
     def _find_exif_value(pil_image, field):
-        for key, value in pil_image._getexif().items():
+        exif = pil_image._getexif()
+        if not exif:
+            return 1
+
+        for key, value in exif.items():
             if TAGS.get(key) == field:
                 return value
         return 1
