@@ -14,7 +14,7 @@ Before you begin, ensure you have met the following requirements:
 To install the tool, open a conda terminal and type these commands
 
 ```
-conda install -c conda-forge opencv regex
+conda install -c conda-forge opencv regex psutil
 pip install https://github.com/SGenheden/auto-crop/archive/v0.0.2.tar.gz
 ```
 
