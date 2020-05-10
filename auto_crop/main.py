@@ -20,7 +20,7 @@ def _get_args():
         "--thres",
         help="The threshold for separating forground from background",
         type=int,
-        default=120,
+        default=150,
     )
     parser.add_argument(
         "--quality", help="The JPEG quality", type=int, default=60,
@@ -28,7 +28,7 @@ def _get_args():
     return parser.parse_args()
 
 
-@Gooey(program_name="autocrop", default_size=(610, 570))
+@Gooey(target="autocrop", program_name="autocrop", default_size=(610, 570))
 def main():
     """ Entry-point for the autocrop command
     """
