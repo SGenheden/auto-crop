@@ -14,7 +14,7 @@ Before you begin, ensure you have met the following requirements:
 To install the tool, open a conda terminal and type these commands
 
 ```
-conda install -c conda-forge opencv
+conda install -c conda-forge opencv regex
 pip install https://github.com/SGenheden/auto-crop/archive/v0.0.2.tar.gz
 ```
 
@@ -28,5 +28,5 @@ autocrop
 
 ## License
 
-The project uses the MIT licence (see LICENCE)
+The project uses the MIT licence (see LICENSE)
 
