@@ -8,4 +8,4 @@ dependencies:
   - regex 
   - psutil
   - pip:
-    - .
+    - https://github.com/SGenheden/auto-crop/archive/0.0.3.tar.gz
