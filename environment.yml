@@ -1,0 +1,11 @@
+name: autocrop-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.6,<3.9
+  - opencv 
+  - regex 
+  - psutil
+  - pip:
+    - .
