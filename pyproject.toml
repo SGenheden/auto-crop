@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "auto_crop"
+version = "0.0.3"
+description = "Tool to automatically crop images based on shapes"
+authors = ["Samuel Genheden <samuel.genheden@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+numpy = "^1.18.0"
+pillow = "^7.1.0"
+imutils = "^0.5.0"
+gooey = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b"
+pytest = "^6.2.2"
+
+[tool.poetry.scripts]
+autocrop = "auto_crop.main:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
